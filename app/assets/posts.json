@@ -1,0 +1,41 @@
+[
+  {
+    "slug": "1-encontro-pedagogico-de-capoeira",
+    "type": "event",
+    "title": "1° Encontro Pedagógico de Capoeira",
+    "description": "Encontro pedagógico realizado em abril de 2025.",
+    "content": "<p>Realizado em abril de 2025, o 1° Encontro Pedagógico de Capoeira reuniu mestres e alunos para discussões profundas sobre a pedagogia da capoeira e sua aplicação no mundo moderno.</p><p>O evento contou com workshops práticos e rodas de conversa, fortalecendo os laços da comunidade Marauê.</p>",
+    "image": "https://marauecapoeira.com.br/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-27-at-10.37.291-1-960x540.jpeg",
+    "date": "2025-04-27",
+    "location": "Bombinhas, SC"
+  },
+  {
+    "slug": "graduacao-2023-bombinhas-sc",
+    "type": "event",
+    "title": "Gradução 2023 – Bombinhas – SC",
+    "description": "Evento de graduação realizado em junho de 2023.",
+    "content": "<p>A graduação de 2023 em Bombinhas foi um momento de muita emoção e reconhecimento. Alunos de diversas idades receberam suas novas cordas, simbolizando o progresso e a dedicação à arte da capoeira.</p><p>O Grupo Marauê reafirma seu compromisso com a formação integral dos seus membros.</p>",
+    "image": "https://marauecapoeira.com.br/wp-content/uploads/2023/06/evento_2-960x540.jpg",
+    "date": "2023-06-15",
+    "location": "Bombinhas, SC"
+  },
+  {
+    "slug": "7-encontro-de-amigos-bombinhas-sc",
+    "type": "event",
+    "title": "7º Encontro de Amigos – Bombinhas – SC",
+    "description": "Encontro de amigos e capoeiristas em Bombinhas.",
+    "content": "<p>O 7º Encontro de Amigos celebrou a união e a amizade através da capoeira. Com a presença de diversos grupos convidados, o evento promoveu a troca de experiências e a valorização cultural.</p><p>Muita energia, musicalidade e capoeira de alto nível marcaram este dia especial.</p>",
+    "image": "https://marauecapoeira.com.br/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-21-at-08.13.44-960x540.jpg",
+    "date": "2023-06-21",
+    "location": "Bombinhas, SC"
+  },
+  {
+    "slug": "lancamento-video-clip-maraue",
+    "type": "post",
+    "title": "Lançamento Vídeo Clip Marauê",
+    "description": "Novo vídeo clip do Grupo Marauê lançado em abril de 2025.",
+    "content": "<p>Confira o novo vídeo clip do Grupo Marauê! Este projeto audiovisual captura a essência da nossa capoeira: a força, o ritmo e a tradição que nos movem.</p><p>Assista agora e sinta a energia do Marauê em cada movimento e cada toque de berimbau.</p>",
+    "image": "https://marauecapoeira.com.br/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-26-at-15.09.39-11-240x300.jpeg",
+    "date": "2025-04-26"
+  }
+]
