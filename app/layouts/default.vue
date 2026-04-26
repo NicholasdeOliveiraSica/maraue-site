@@ -67,8 +67,4 @@ const mobileItems = [
 ]
 </script>
 
-<style>
-body {
-  @apply bg-gray-50;
-}
-</style>
+
