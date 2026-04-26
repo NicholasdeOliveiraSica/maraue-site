@@ -1,78 +1,85 @@
 <template>
-  <div class="space-y-16">
-    <header class="space-y-4">
-      <h1 class="text-4xl font-bold text-gray-900 border-b-4 border-orange-500 pb-2 inline-block">Contato & Localização</h1>
-      <p class="text-lg text-gray-600">
-        Entre em contato conosco, conheça nossos parceiros ou venha nos visitar em Bombinhas.
+  <div class="space-y-24">
+    <header class="space-y-6 text-center max-w-3xl mx-auto">
+      <UBadge color="primary" variant="subtle" size="lg" class="rounded-full px-4 font-bold uppercase tracking-widest">Conecte-se</UBadge>
+      <h1 class="text-5xl md:text-6xl font-black text-slate-900 leading-[0.9] tracking-tighter">
+        Fale com o <br/>
+        <span class="text-orange-600">Grupo Marauê</span>
+      </h1>
+      <p class="text-xl text-slate-500 font-medium leading-relaxed">
+        Estamos prontos para tirar suas dúvidas, ouvir sugestões ou receber novos alunos.
       </p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <!-- Contact Info -->
-      <section class="space-y-8">
-        <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
-          <UIcon name="i-heroicons-chat-bubble-left-right" class="text-orange-500" />
-          Fale Conosco
-        </h2>
-        
-        <div class="space-y-4">
-          <UButton 
-            v-for="contact in contacts" 
-            :key="contact.label"
-            :icon="contact.icon"
-            :label="contact.label"
-            :to="contact.to"
-            target="_blank"
-            color="orange"
-            variant="soft"
-            size="xl"
-            block
-            class="justify-start py-4"
-          />
-        </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Contact Cards -->
+      <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <UButton 
+          v-for="contact in contacts" 
+          :key="contact.label"
+          :to="contact.to"
+          target="_blank"
+          variant="ghost"
+          class="p-8 bg-white rounded-[2rem] border border-orange-50 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center gap-4 group"
+        >
+          <div class="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center group-hover:bg-orange-500 transition-colors duration-300">
+            <UIcon :name="contact.icon" class="w-8 h-8 text-orange-600 group-hover:text-white transition-colors duration-300" />
+          </div>
+          <span class="font-black text-slate-900">{{ contact.label }}</span>
+        </UButton>
+      </div>
 
-        <div class="p-6 bg-orange-50 rounded-2xl border border-orange-100">
-          <h3 class="font-bold text-orange-900 mb-2">Horários de Treino</h3>
-          <ul class="text-sm text-orange-800 space-y-1">
-            <li>Segunda e Quarta: 19:30 - 21:00</li>
-            <li>Sábado (Roda Aberta): 16:00</li>
+      <!-- Training Times Card -->
+      <div class="p-8 bg-slate-900 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-600/20 to-transparent opacity-50"></div>
+        <div class="relative space-y-6">
+          <div class="w-12 h-12 rounded-xl bg-orange-500 flex items-center justify-center">
+            <UIcon name="i-heroicons-clock" class="w-6 h-6 text-white" />
+          </div>
+          <h3 class="text-2xl font-black text-white leading-tight">Horários de Treino</h3>
+          <ul class="space-y-4">
+            <li class="flex flex-col gap-1">
+              <span class="text-orange-400 text-xs font-black uppercase tracking-widest">Segunda e Quarta</span>
+              <span class="text-slate-200 font-medium">19:30 — 21:00</span>
+            </li>
+            <li class="flex flex-col gap-1">
+              <span class="text-orange-400 text-xs font-black uppercase tracking-widest">Sábado</span>
+              <span class="text-slate-200 font-medium">16:00 (Roda Aberta)</span>
+            </li>
           </ul>
+          <UButton label="Como chegar" block color="white" variant="solid" size="lg" class="rounded-xl font-bold mt-4" />
         </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- Partners -->
-      <section class="space-y-8">
-        <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
+    <!-- Partners & Map -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <section class="space-y-8 bg-white/40 backdrop-blur-md p-10 rounded-[2.5rem] border border-orange-100/50">
+        <h2 class="text-3xl font-black text-slate-900 tracking-tighter flex items-center gap-3">
           <UIcon name="i-heroicons-heart" class="text-orange-500" />
-          Nossos Parceiros
+          Parcerias de Valor
         </h2>
-        
         <div class="grid grid-cols-2 gap-4">
-          <div v-for="partner in partners" :key="partner.name" class="p-4 bg-white border border-gray-100 rounded-xl flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-default">
-            <span class="font-bold text-gray-400 group-hover:text-orange-500">{{ partner.name }}</span>
+          <div v-for="partner in partners" :key="partner.name" class="p-6 bg-white rounded-2xl border border-orange-50 flex items-center justify-center text-center group hover:border-orange-200 transition-all cursor-default">
+            <span class="font-black text-slate-400 group-hover:text-orange-600 transition-colors duration-300 leading-tight">{{ partner.name }}</span>
           </div>
         </div>
       </section>
-    </div>
 
-    <!-- Map Section -->
-    <section class="space-y-6">
-      <h2 class="text-2xl font-bold text-gray-800 flex items-center gap-2">
-        <UIcon name="i-heroicons-map-pin" class="text-orange-500" />
-        Onde Treinamos
-      </h2>
-      <div class="w-full aspect-video md:aspect-[21/9] rounded-3xl overflow-hidden shadow-lg border-4 border-white">
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14197.3563914856!2d-48.5134707!3d-27.1402287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d89617514a600d%3A0x600b3d6859846b0!2sBombinhas%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1713123456789!5m2!1spt-BR!2sbr" 
-          width="100%" 
-          height="100%" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-    </section>
+      <section class="space-y-8">
+        <div class="w-full aspect-square md:aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white group relative">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14197.3563914856!2d-48.5134707!3d-27.1402287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d89617514a600d%3A0x600b3d6859846b0!2sBombinhas%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1713123456789!5m2!1spt-BR!2sbr" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 

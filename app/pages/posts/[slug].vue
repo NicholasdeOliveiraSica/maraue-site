@@ -13,7 +13,7 @@
       <!-- Header -->
       <header class="space-y-4">
         <div class="flex items-center gap-3">
-          <UBadge v-if="post.type === 'event'" color="orange" variant="solid">EVENTO</UBadge>
+          <UBadge v-if="post.type === 'event'" color="primary" variant="solid">EVENTO</UBadge>
           <span class="text-sm text-gray-500">{{ formatDate(post.date) }}</span>
         </div>
         <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight">
@@ -45,7 +45,7 @@
         </div>
       </div>
       <div class="flex gap-2">
-        <UButton icon="i-heroicons-share" label="Compartilhar" color="orange" variant="soft" />
+        <UButton icon="i-heroicons-share" label="Compartilhar" color="primary" variant="soft" />
         <UButton icon="i-heroicons-bookmark" color="gray" variant="ghost" />
       </div>
     </section>
@@ -53,7 +53,7 @@
 
   <div v-else class="text-center py-20">
     <h2 class="text-2xl font-bold text-gray-800">Post não encontrado</h2>
-    <UButton to="/" label="Voltar para o início" color="orange" class="mt-4" />
+    <UButton to="/" label="Voltar para o início" color="primary" class="mt-4" />
   </div>
 </template>
 
