@@ -4,9 +4,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/ui'],
   css: ['~/app.css'],
-  ui: {
-    primary: 'orange'
-  },
   future: {
     compatibilityVersion: 4,
   },

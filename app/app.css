@@ -19,10 +19,14 @@
   --color-primary-950: var(--color-orange-950);
 }
 
+/* Force --ui-primary outside any layer so NuxtUI cannot override it */
+:root {
+  --ui-primary: var(--color-orange-500);
+}
+
 @layer base {
-  :root {
-    /* Explicitly set Nuxt UI color variables for Orange */
-    --ui-primary: var(--color-orange-500);
+  html {
+    font-size: 90%; /* Scales all rem-based units (Tailwind + Nuxt UI) to ~90% */
   }
 
   html, body, #__nuxt {
